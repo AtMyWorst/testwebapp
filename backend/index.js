@@ -7,4 +7,7 @@ const adminRouter = require('./routes/params');
 // Configuring port
 const port = process.env.PORT || '10201';
 
-//  Creating t
+//  Creating the app
+const app = express();
+
+// Regis
