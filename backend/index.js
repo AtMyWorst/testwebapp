@@ -11,4 +11,7 @@ const port = process.env.PORT || '10201';
 const app = express();
 
 // Register the routes
-app.use('/params', par
+app.use('/params', paramsRouter);
+
+// Starting the app
+app.listen(po
