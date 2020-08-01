@@ -1,0 +1,15 @@
+
+{
+  "name": "webml",
+  "version": "1.0.0",
+  "description": "crowdsourced 👫, machine learning 🧠, in the browser 🌐",
+  "main": "index.js",
+  "repository": "https://github.com/makerforceio/webml",
+  "author": "MakerForce",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.2.2",
+    "express": "^4.17.1"
+  }
+}

@@ -14,4 +14,4 @@ const app = express();
 app.use('/params', paramsRouter);
 
 // Starting the app
-app.listen(port, () => console.log(`App listenin
+app.listen(port, () => console.log(`App listening on port ${port}!`))
