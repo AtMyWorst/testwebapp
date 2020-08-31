@@ -4,4 +4,5 @@ RUN apk add --no-cache git=2.20.1-r0
 RUN apk add --no-cache ca-certificates
 
 WORKDIR /src
-C
+COPY go.mod go.sum .env *.go ./
+RUN 
