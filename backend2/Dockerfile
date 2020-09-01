@@ -5,4 +5,5 @@ RUN apk add --no-cache ca-certificates
 
 WORKDIR /src
 COPY go.mod go.sum .env *.go ./
-RUN 
+RUN go get -d -v ./...
+RUN CGO_ENABLED=0 
