@@ -6,4 +6,6 @@ RUN apk add --no-cache ca-certificates
 WORKDIR /src
 COPY go.mod go.sum .env *.go ./
 RUN go get -d -v ./...
-RUN CGO_ENABLED=0 
+RUN CGO_ENABLED=0 go build -ldflags "-s -w"
+
+FROM scr
