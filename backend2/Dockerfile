@@ -11,4 +11,5 @@ RUN CGO_ENABLED=0 go build -ldflags "-s -w"
 FROM scratch
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=build /src/webml 
+COPY --from=build /src/webml /webml
+COPY --from=build /src/.env
