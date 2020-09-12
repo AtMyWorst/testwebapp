@@ -12,4 +12,6 @@ FROM scratch
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build /src/webml /webml
-COPY --from=build /src/.env
+COPY --from=build /src/.env /.env
+
+ENTRYPOINT ["/webml"]
