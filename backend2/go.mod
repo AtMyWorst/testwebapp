@@ -7,4 +7,5 @@ require (
 	github.com/minio/minio-go v6.0.14+incompatible
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/yuin/gopher-lua v0.0.0-20190514113301-1cd887cd7036
-	golang.org/x/crypto v0.0.0-2
+	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4 // indirect
+	
