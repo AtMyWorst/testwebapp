@@ -52,3 +52,42 @@ func main() {
 			log.Fatal("Error creating bucket")
 		}
 	} else {
+		log.Printf("Created bucket %s", "parser")
+	}
+
+	// Routes
+	router := httprouter.New()
+	// Return minio presigned URLs
+	router.GET("/models", Cors(GetModels))
+	router.GET("/model", Cors(GetModel))
+	router.PUT("/model", Cors(UploadModel))
+	router.GET("/data", Cors(GetData))
+	router.PUT("/data", Cors(UploadData))
+	router.GET("/labels", Cors(GetLabels))
+	router.PUT("/labels", Cors(UploadLabels))
+	router.GET("/data/batch", Cors(GetBatchData))
+	router.GET("/labels/batch", Cors(GetBatchLabels))
+	router.GET("/data_parser", Cors(GetDataParser))
+	router.PUT("/data_parser", Cors(UploadDataParser))
+  router.GET("/batch", Cors(GetBatch))
+	router.POST("/batch", Cors(BatchData))
+	router.GET("/metadata", Cors(GetMetadata))
+	router.PUT("/metadata", Cors(UploadMetadata))
+
+	router.POST("/parse", TestParse)
+
+	// Start server
+	log.Printf("starting server on %s", listen)
+	log.Fatal(http.ListenAndServe(listen, router))
+}
+
+func Cors(next httprouter.Handle) httprouter.Handle {
+	return func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		next(w, r, p)
+	}
+}
+
+type BucketsInfo struct {
+	Models []string `json:"models"`
+}
