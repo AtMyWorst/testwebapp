@@ -168,3 +168,38 @@ func UploadLabels(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
+
+	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
+}
+
+func UploadMetadata(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	bucketName := r.FormValue("model")
+
+	exists, err := minioClient.BucketExists(bucketName)
+	if !(err == nil && exists) {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	expiry := time.Second * 120
+	presignedURL, err := minioClient.PresignedPutObject(bucketName, "metadata", expiry)
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
+}
+
+func UploadDataParser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	id := r.FormValue("id")
+
+	expiry := time.Second * 120
+	presignedURL, err := minioClient.PresignedPutObject("parser", id, expiry)
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
+}
