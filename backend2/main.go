@@ -91,3 +91,40 @@ func Cors(next httprouter.Handle) httprouter.Handle {
 type BucketsInfo struct {
 	Models []string `json:"models"`
 }
+
+func GetModels(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	buckets, err := minioClient.ListBuckets()
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	bucketNames := BucketsInfo{}
+	bucketNames.Models = make([]string, 0)
+	for _, bucket := range buckets {
+		bucketNames.Models = append(bucketNames.Models, bucket.Name)
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(bucketNames)
+}
+
+func UploadModel(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	bucketName := r.FormValue("id")
+
+	// Create bucket if it doesn't exist
+	err := minioClient.MakeBucket(bucketName, "us-east-1")
+	if err != nil {
+		exists, err := minioClient.BucketExists(bucketName)
+		if !(err == nil && exists) {
+			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+			return
+		}
+	}
+
+	expiry := time.Second * 120
+	presignedURL, err := minioClient.PresignedPutObject(bucketName, "model", expiry)
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
