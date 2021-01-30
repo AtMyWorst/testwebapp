@@ -203,3 +203,44 @@ func UploadDataParser(w http.ResponseWriter, r *http.Request, p httprouter.Param
 
 	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
 }
+
+func GetModel(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	id := r.FormValue("id")
+	if id == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	reqParams := make(url.Values)
+	expiry := time.Second * 120
+	presignedURL, err := minioClient.PresignedGetObject(id, "model", expiry, reqParams)
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
+}
+
+func GetData(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	model := r.FormValue("model")
+	if model == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	id := r.FormValue("id")
+	if id == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	reqParams := make(url.Values)
+	expiry := time.Second * 120
+	presignedURL, err := minioClient.PresignedGetObject(model, "data:"+id, expiry, reqParams)
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
