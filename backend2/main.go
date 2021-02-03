@@ -281,3 +281,43 @@ func GetMetadata(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	expiry := time.Second * 120
 	presignedURL, err := minioClient.PresignedGetObject(model, "metadata", expiry, reqParams)
 	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	http.Redirect(w, r, presignedURL.String(), http.StatusTemporaryRedirect)
+}
+
+func GetBatch(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+  model := r.FormValue("model")
+  if model == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+  ids := make([]string, 0)
+  doneCh := make(chan struct{})
+  defer close(doneCh)
+  objectsCh := minioClient.ListObjectsV2(model, "batch:data:", true, doneCh)
+  for object := range objectsCh {
+    if object.Err == nil {
+      ids = append(ids, object.Key)
+    }
+  }
+
+  n, _ := rand.Int(rand.Reader, big.NewInt(int64(len(ids))))
+  w.Write([]byte(ids[n.Int64()]))
+}
+
+func GetBatchData(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	model := r.FormValue("model")
+	if model == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	id := r.FormValue("id")
+	if id == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
