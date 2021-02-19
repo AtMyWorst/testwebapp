@@ -376,3 +376,37 @@ func GetDataParser(w http.ResponseWriter, r *http.Request, p httprouter.Params) 
 }
 
 func BatchData(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	dataParserId := r.FormValue("data_parser")
+	labelParserId := r.FormValue("label_parser")
+
+	modelId := r.FormValue("model_id")
+	dataId := r.FormValue("data_id")
+
+	batchSize, err := strconv.Atoi(r.FormValue("batch_size"))
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	if dataParserId == "" || labelParserId == "" || modelId == "" || dataId == "" {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+
+	dataParserObject, err := minioClient.GetObject("parser", dataParserId, minio.GetObjectOptions{})
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+	dataParserBytes := new(bytes.Buffer)
+	dataParserBytes.ReadFrom(dataParserObject)
+	dataParser := dataParserBytes.String()
+
+	labelParserObject, err := minioClient.GetObject("parser", labelParserId, minio.GetObjectOptions{})
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+	labelParserBytes := new(bytes.Buffer)
+	labelParserBytes.ReadFrom(labelParserObject)
+	labelParser := labelParserBytes.String()
