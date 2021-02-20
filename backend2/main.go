@@ -458,3 +458,42 @@ func BatchData(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 				if len(batch) >= batchSize {
 					batchId := RandomHex()
 					data := make([]byte, 0)
+					for _, datum := range batch {
+						data = append(data, datum...)
+					}
+					_, err := minioClient.PutObject(modelId, "batch:data:"+batchId, bytes.NewReader(data), -1, minio.PutObjectOptions{})
+					if err != nil {
+						log.Printf("%s", err)
+						http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+						return
+					}
+					batchIds = append(batchIds, batchId)
+				}
+			})
+		}
+	}
+
+	labelL := lua.NewState()
+	defer labelL.Close()
+	err = labelL.DoString(labelParser)
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	labelObject, err := minioClient.GetObject(modelId, "label:"+dataId, minio.GetObjectOptions{})
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	buf = make([]byte, 512)
+	i := 0
+	for {
+		n, err := labelObject.Read(buf)
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+			return
+		}
