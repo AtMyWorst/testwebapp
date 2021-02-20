@@ -541,3 +541,45 @@ func BatchData(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 }
 
 func TestParse(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	file, _, err := r.FormFile("file")
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusBadRequest), http.StatusBadRequest)
+		return
+	}
+	defer file.Close()
+
+	L := lua.NewState()
+	defer L.Close()
+	err = L.DoFile("../mnist_data_parser.lua")
+	if err != nil {
+		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
+	}
+
+	num := 0
+
+	buf := make([]byte, 512)
+	for {
+		n, err := file.Read(buf)
+		if err == io.EOF {
+			break
+		} else if err != nil {
+			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+			return
+		}
+
+		err = L.CallByParam(lua.P{
+			Fn:      L.GetGlobal("parse"),
+			NRet:    1,
+			Protect: true,
+		}, lua.LString(buf), lua.LNumber(n))
+		if err != nil {
+			log.Printf("%s", err)
+			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+			return
+		}
+
+		lv := L.Get(-1)
+		L.Pop(1)
+		if table, ok := lv.(*lua.LTable); ok {
+			num += table.Len()
