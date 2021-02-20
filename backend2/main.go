@@ -497,3 +497,47 @@ func BatchData(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 			return
 		}
+
+		err = labelL.CallByParam(lua.P{
+			Fn:      labelL.GetGlobal("parse"),
+			NRet:    1,
+			Protect: true,
+		}, lua.LString(buf), lua.LNumber(n))
+		if err != nil {
+			log.Printf("%s", err)
+			http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+			return
+		}
+
+		lv := labelL.Get(-1)
+		labelL.Pop(1)
+		if table, ok := lv.(*lua.LTable); ok {
+			table.ForEach(func(_ lua.LValue, v lua.LValue) {
+				val := []byte(v.(lua.LString).String())
+				batch = append(batch, val)
+				if len(batch) >= batchSize {
+					batchId := batchIds[i]
+					data := make([]byte, 0)
+					for _, datum := range batch {
+						data = append(data, datum...)
+					}
+					_, err := minioClient.PutObject(modelId, "batch:label:"+batchId, bytes.NewReader(data), -1, minio.PutObjectOptions{})
+					if err != nil {
+						log.Printf("%s", err)
+						http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+						return
+					}
+					i += 1
+					if i >= len(batchIds) {
+						w.WriteHeader(200)
+						return
+					}
+				}
+			})
+		}
+	}
+
+	w.WriteHeader(200)
+}
+
+func TestParse(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
