@@ -583,3 +583,17 @@ func TestParse(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 		L.Pop(1)
 		if table, ok := lv.(*lua.LTable); ok {
 			num += table.Len()
+		}
+	}
+
+	w.Write([]byte(strconv.Itoa(num)))
+}
+
+func RandomHex() string {
+	b := make([]byte, 16)
+	_, err := rand.Read(b)
+	if err != nil {
+		panic("unable to generate 16 bytes of randomness")
+	}
+	return hex.EncodeToString(b)
+}
