@@ -6,4 +6,7 @@ networks:
 
 services:
   backend:
-    buil
+    build: backend
+    restart: always
+    networks:
+   
