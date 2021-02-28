@@ -9,4 +9,5 @@ services:
     build: backend
     restart: always
     networks:
-   
+      - http_network
+    labels
