@@ -12,4 +12,4 @@ services:
       - http_network
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:sta
+      - "traefik.frontend.rule=Host:staging.webml.app;PathPrefixStrip:/b
