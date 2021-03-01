@@ -12,4 +12,4 @@ services:
       - http_network
     labels:
       - "traefik.enable=true"
-      - "trae
+      - "traefik.frontend.rule=Host:sta
