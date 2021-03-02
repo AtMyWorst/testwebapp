@@ -12,4 +12,6 @@ services:
       - http_network
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:staging.webml.app;PathPrefixStrip:/b
+      - "traefik.frontend.rule=Host:staging.webml.app;PathPrefixStrip:/backend/"
+      - "traefik.port=10201"
+ 
