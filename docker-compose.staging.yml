@@ -16,4 +16,5 @@ services:
       - "traefik.port=10201"
   backend2:
     build: backend2
- 
+    restart: always
+    networks
