@@ -19,4 +19,5 @@ services:
     restart: always
     networks:
       - http_network
-    lab
+    labels:
+      - "traefik.enable=true"
