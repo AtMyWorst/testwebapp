@@ -17,4 +17,6 @@ services:
   backend2:
     build: backend2
     restart: always
-    networks
+    networks:
+      - http_network
+    lab
