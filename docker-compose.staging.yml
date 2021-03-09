@@ -21,4 +21,5 @@ services:
       - http_network
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:staging.webml.app;PathPrefixStrip:/ba
+      - "traefik.frontend.rule=Host:staging.webml.app;PathPrefixStrip:/backend2/"
+      - "traefik.por
