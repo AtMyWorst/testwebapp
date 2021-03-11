@@ -24,4 +24,7 @@ services:
       - "traefik.frontend.rule=Host:staging.webml.app;PathPrefixStrip:/backend2/"
       - "traefik.port=10200"
   frontend:
-    build:
+    build: frontend
+    restart: always
+    networks:
+  
