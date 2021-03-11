@@ -27,4 +27,5 @@ services:
     build: frontend
     restart: always
     networks:
-  
+      - http_network
+    environment:
