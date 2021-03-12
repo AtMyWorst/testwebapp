@@ -29,3 +29,6 @@ services:
     networks:
       - http_network
     environment:
+      - NUXT_HOST=0.0.0.0
+    labels:
+      - "
