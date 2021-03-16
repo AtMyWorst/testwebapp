@@ -32,4 +32,4 @@ services:
       - NUXT_HOST=0.0.0.0
     labels:
       - "traefik.enable=true"
-      - "traefi
+      - "traefik.frontend.rule=Host:staging.
