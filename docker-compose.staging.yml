@@ -32,4 +32,5 @@ services:
       - NUXT_HOST=0.0.0.0
     labels:
       - "traefik.enable=true"
-      - "traefik.frontend.rule=Host:staging.
+      - "traefik.frontend.rule=Host:staging.webml.app"
+      - "traefik.port=3000"
