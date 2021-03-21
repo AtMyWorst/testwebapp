@@ -3,4 +3,6 @@ services:
   backend:
     build: ./backend
     tty: true
-    por
+    ports:
+      - "10201:10201"
+    en
