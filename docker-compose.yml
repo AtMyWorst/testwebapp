@@ -5,4 +5,6 @@ services:
     tty: true
     ports:
       - "10201:10201"
-    en
+    environment:
+      - LISTEN=:10201
+  back
