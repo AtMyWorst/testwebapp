@@ -7,4 +7,6 @@ services:
       - "10201:10201"
     environment:
       - LISTEN=:10201
-  back
+  backend2:
+    build: ./backend2
+    tty:
