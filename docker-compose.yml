@@ -9,4 +9,7 @@ services:
       - LISTEN=:10201
   backend2:
     build: ./backend2
-    tty:
+    tty: true
+    ports:
+      - "10200:10200"
+  
