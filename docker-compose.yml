@@ -12,4 +12,5 @@ services:
     tty: true
     ports:
       - "10200:10200"
-  
+    environment:
+      - LISTEN=:10200
