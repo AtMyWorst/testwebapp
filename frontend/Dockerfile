@@ -1,1 +1,3 @@
-F
+FROM node
+
+ENV NUXT_ENV_BACKEND2_URL=https://stag
