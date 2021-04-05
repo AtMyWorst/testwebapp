@@ -6,3 +6,5 @@ ENV NUXT_ENV_BACKEND1_URL=https://staging.webml.app/backend
 COPY . ./
 RUN yarn install
 RUN yarn build
+
+CMD ["yarn", "start"]
