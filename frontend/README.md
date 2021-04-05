@@ -1,3 +1,5 @@
 # webml
 
-> crowdsourced 👫
+> crowdsourced 👫, machine learning 🧠, in the browser 🌐
+
+## B
