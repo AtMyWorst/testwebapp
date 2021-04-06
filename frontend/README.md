@@ -2,4 +2,7 @@
 
 > crowdsourced 👫, machine learning 🧠, in the browser 🌐
 
-## B
+## Build Setup
+
+``` bash
+# install d
