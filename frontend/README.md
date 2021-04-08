@@ -5,4 +5,7 @@
 ## Build Setup
 
 ``` bash
-# install d
+# install dependencies
+$ yarn install
+
+# serve with 
