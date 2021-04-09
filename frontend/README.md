@@ -9,4 +9,6 @@
 $ yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn 
+$ yarn dev
+
+# build for productio
