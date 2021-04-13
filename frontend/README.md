@@ -15,4 +15,8 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# generate static 
+# generate static project
+$ yarn generate
+```
+
+For detailed explanati
