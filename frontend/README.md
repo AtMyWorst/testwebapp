@@ -19,4 +19,4 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanati
+For detailed explanation on how things work, checkout [Nux
