@@ -85,3 +85,39 @@ export default {
   methods: {
     async submit() {
       // let files = this.$refs.fileloader.files
+
+      // validate
+      if (
+        !this.sessionTitle ||
+        !this.sessionModel ||
+        !this.sessionData ||
+        !this.sessionLabels ||
+        !this.sessionDataParser
+      ) {
+        return
+      }
+
+      // TODO: create meta.json
+
+      const base = process.env.NUXT_ENV_BACKEND2_URL || 'http://localhost:10200'
+      const modelid = cuid()
+      const dataid = cuid()
+      const dataparserid = cuid()
+      await fetch(base + '/model?id=' + modelid, {
+        method: 'PUT',
+        redirect: 'follow',
+        body: this.sessionModel
+      })
+      await fetch(base + '/data?model=' + modelid + '&id=' + dataid, {
+        method: 'PUT',
+        redirect: 'follow',
+        body: this.sessionData
+      })
+      await fetch(base + '/labels?model=' + modelid + '&id=' + dataid, {
+        method: 'PUT',
+        redirect: 'follow',
+        body: this.sessionLabels
+      })
+      await fetch(base + '/data_parser?model=' + modelid + '&id=' + modelid, {
+        method: 'PUT',
+        redirect: 'follow',
