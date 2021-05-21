@@ -121,3 +121,30 @@ export default {
       await fetch(base + '/data_parser?model=' + modelid + '&id=' + modelid, {
         method: 'PUT',
         redirect: 'follow',
+        body: this.sessionDataParser
+      })
+      await fetch(base + '/metadata?model=' + modelid, {
+        method: 'PUT',
+        redirect: 'follow',
+        body: JSON.stringify({
+          title: this.sessionTitle
+        })
+      })
+      await fetch(
+        base +
+          '/batch?model_id=' +
+          modelid +
+          '&data_id=' +
+          dataid +
+          '&batch_size=500',
+        {
+          method: 'POST',
+          redirect: 'follow'
+        }
+      )
+      this.$emit('update:show', false)
+      this.$emit('needRefresh')
+    }
+  }
+}
+</script>
