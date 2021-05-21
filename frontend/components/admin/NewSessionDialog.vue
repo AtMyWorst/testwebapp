@@ -43,3 +43,45 @@
             @input="sessionLabels = $event"
             placeholder="Drop labels here"
             label="Labels"
+          />
+        </div>
+        <div class="m-4">
+          <DropArea
+            @input="sessionDataParser = $event"
+            placeholder="Drop data parser here"
+            label="Data Parser"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.fader {
+  background: rgba(0, 0, 0, 0.5);
+}
+</style>
+
+<script>
+import DropArea from '~/components/common/DropArea.vue'
+import cuid from 'cuid'
+export default {
+  components: {
+    DropArea
+  },
+  props: {
+    show: Boolean
+  },
+  data() {
+    return {
+      sessionTitle: '',
+      sessionModel: null,
+      sessionData: null,
+      sessionLabels: null,
+      sessionDataParser: null
+    }
+  },
+  methods: {
+    async submit() {
+      // let files = this.$refs.fileloader.files
