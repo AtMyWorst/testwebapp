@@ -1,4 +1,7 @@
 <template>
   <button
     class="
-		font-
+		font-bold
+		py-2 px-4
+		rounded"
+  >
