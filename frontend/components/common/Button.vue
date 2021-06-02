@@ -7,4 +7,4 @@
   >
     <slot></slot>
   </button>
-</t
+</template>
