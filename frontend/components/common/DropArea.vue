@@ -42,3 +42,26 @@ export default {
       } catch (e) {
         this.filename = ''
       }
+    },
+    dragOver(e) {
+      e.preventDefault()
+    },
+    clickInput(e) {
+      try {
+        const file = e.target.files[0]
+        if (!file) {
+          throw new Error('Item not found')
+        }
+        this.chosenOne(file)
+      } catch (e) {
+        this.filename = ''
+      }
+    },
+    chosenOne(file) {
+      this.filename = file.name
+      console.log(file)
+      this.$emit('input', file)
+    }
+  }
+}
+</script>
