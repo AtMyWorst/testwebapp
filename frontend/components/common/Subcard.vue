@@ -2,4 +2,5 @@
   <div class="flex flex-col mx-6">
     <div class="flex items-center">
       <div class="flex-grow">
-        <h1 v-if="title" class="font-bold text-2xl">{{ title 
+        <h1 v-if="title" class="font-bold text-2xl">{{ title }}</h1>
+        <h2 v-if="subtitle"
