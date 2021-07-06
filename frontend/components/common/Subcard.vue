@@ -6,3 +6,8 @@
         <h2 v-if="subtitle" class="font-medium">{{ subtitle }}</h2>
       </div>
     </div>
+    <slot></slot>
+  </div>
+</template>
+
+<s
