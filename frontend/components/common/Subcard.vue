@@ -13,4 +13,8 @@
 <script>
 export default {
   props: {
-    title: String
+    title: String,
+    subtitle: String
+  }
+}
+</script>
