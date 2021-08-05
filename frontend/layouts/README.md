@@ -4,4 +4,4 @@
 
 This directory contains your Application Layouts.
 
-More information about the usage of this directory 
+More information about the usage of this directory in [the documentation](https://nuxtjs.
