@@ -4,4 +4,4 @@
 
 This directory contains your Application Layouts.
 
-More information
+More information about the usage of this directory 
