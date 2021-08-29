@@ -1,4 +1,8 @@
 import * as tf from '@tensorflow/tfjs';
 
 /*
-* Params for loggin
+* Params for logging
+*  -> Epoch
+*  -> Loss
+*  -> Accuracy
+*
