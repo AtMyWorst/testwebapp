@@ -5,4 +5,8 @@ import * as tf from '@tensorflow/tfjs';
 *  -> Epoch
 *  -> Loss
 *  -> Accuracy
-*
+*  -> Batch num
+*  -> Runtime
+*/
+
+class DistTensor
