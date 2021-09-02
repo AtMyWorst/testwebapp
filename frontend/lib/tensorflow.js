@@ -9,4 +9,8 @@ import * as tf from '@tensorflow/tfjs';
 *  -> Runtime
 */
 
-class DistTensor
+class DistTensorflow {
+  modelId;
+  model;
+  batchSize;
+  batchN
