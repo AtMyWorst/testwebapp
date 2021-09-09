@@ -13,4 +13,7 @@ class DistTensorflow {
   modelId;
   model;
   batchSize;
-  batchN
+  batchNo = 0;
+  stopped = false;
+
+  statsCa
