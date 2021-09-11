@@ -16,4 +16,6 @@ class DistTensorflow {
   batchNo = 0;
   stopped = false;
 
-  statsCa
+  statsCallback;
+
+  constructor(modelId, stat
