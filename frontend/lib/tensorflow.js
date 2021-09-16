@@ -19,4 +19,5 @@ class DistTensorflow {
   statsCallback;
 
   constructor(modelId, statsCallback, base1, base2) {
-    this.mode
+    this.modelId = modelId;
+    this.statsCallback = stats
