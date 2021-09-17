@@ -22,4 +22,6 @@ class DistTensorflow {
     this.modelId = modelId;
     this.statsCallback = statsCallback;
 	this.base1 = base1;
-	  this.bas
+	  this.base2 = base2;
+
+  tf.loadLayersModel(`${this.
