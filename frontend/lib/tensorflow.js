@@ -24,4 +24,4 @@ class DistTensorflow {
 	this.base1 = base1;
 	  this.base2 = base2;
 
-  tf.loadLayersModel(`${this.
+  tf.loadLayersModel(`${this.base2}/model?id=${this.m
