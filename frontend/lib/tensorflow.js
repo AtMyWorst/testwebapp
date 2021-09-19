@@ -25,3 +25,6 @@ class DistTensorflow {
 	  this.base2 = base2;
 
   tf.loadLayersModel(`${this.base2}/model?id=${this.modelId}`).then(function (model) {
+    this.model = model;
+
+    //
