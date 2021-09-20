@@ -27,4 +27,4 @@ class DistTensorflow {
   tf.loadLayersModel(`${this.base2}/model?id=${this.modelId}`).then(function (model) {
     this.model = model;
 
-    //
+    // Compile the model with default optimizer an
