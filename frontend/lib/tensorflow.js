@@ -30,4 +30,4 @@ class DistTensorflow {
     // Compile the model with default optimizer and loss
     this.model.compile({
       optimizer: tf.train.adam(),
-   
+      loss: 'categoricalCrossentro
