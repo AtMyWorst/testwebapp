@@ -32,4 +32,8 @@ class DistTensorflow {
       optimizer: tf.train.adam(),
       loss: 'categoricalCrossentropy',
       metrics: ['accuracy'],
-   
+    });
+  });
+  }
+
+  async loadNextB
