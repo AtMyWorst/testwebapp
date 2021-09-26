@@ -36,4 +36,5 @@ class DistTensorflow {
   });
   }
 
-  async loadNextB
+  async loadNextBatch() {
+    // Load the next batch
