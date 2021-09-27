@@ -37,4 +37,5 @@ class DistTensorflow {
   }
 
   async loadNextBatch() {
-    // Load the next batch
+    // Load the next batch from the backend
+    let res = a
