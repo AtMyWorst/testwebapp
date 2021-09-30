@@ -40,4 +40,7 @@ class DistTensorflow {
     // Load the next batch from the backend
     let res = await fetch(`${base2}/?model=${this.modelId}`, {
       method: 'GET',
-      redirect: 'follo
+      redirect: 'follow',
+    });
+
+    const batchShape = res.da
