@@ -43,4 +43,5 @@ class DistTensorflow {
       redirect: 'follow',
     });
 
-    const batchShape = res.da
+    const batchShape = res.data.batch;
+    const labelShape = res.data
