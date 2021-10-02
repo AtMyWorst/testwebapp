@@ -44,4 +44,7 @@ class DistTensorflow {
     });
 
     const batchShape = res.data.batch;
-    const labelShape = res.data
+    const labelShape = res.data.label;
+
+    // Set batch size
+ 
