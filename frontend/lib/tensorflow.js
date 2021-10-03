@@ -47,4 +47,6 @@ class DistTensorflow {
     const labelShape = res.data.label;
 
     // Set batch size
- 
+    this.batchSize = batchShape[0];
+
+    // 
