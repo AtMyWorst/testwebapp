@@ -49,4 +49,5 @@ class DistTensorflow {
     // Set batch size
     this.batchSize = batchShape[0];
 
-    // 
+    // Load the minibatch data
+    r
