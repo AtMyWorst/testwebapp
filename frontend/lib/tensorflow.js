@@ -51,4 +51,8 @@ class DistTensorflow {
 
     // Load the minibatch data
     res = await fetch(`${base2}/data/batch?model=${this.modelId}`, {
-      method: 'G
+      method: 'GET',
+      redirect: 'follow',
+    });
+
+    
