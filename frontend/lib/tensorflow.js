@@ -50,4 +50,5 @@ class DistTensorflow {
     this.batchSize = batchShape[0];
 
     // Load the minibatch data
-    res = await fetch(`${base2}/data/batch
+    res = await fetch(`${base2}/data/batch?model=${this.modelId}`, {
+      method: 'G
