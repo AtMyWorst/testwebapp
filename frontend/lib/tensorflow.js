@@ -55,4 +55,4 @@ class DistTensorflow {
       redirect: 'follow',
     });
 
-    let batchArray = new UInt8A
+    let batchArray = new UInt8Array(await res.arrayBuffer());
