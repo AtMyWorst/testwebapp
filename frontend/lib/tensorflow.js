@@ -55,4 +55,4 @@ class DistTensorflow {
       redirect: 'follow',
     });
 
-    
+    let batchArray = new UInt8A
