@@ -56,3 +56,6 @@ class DistTensorflow {
     });
 
     let batchArray = new UInt8Array(await res.arrayBuffer());
+
+    // Load the minibatch labels
+    
