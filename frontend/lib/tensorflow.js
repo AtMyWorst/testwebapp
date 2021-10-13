@@ -63,4 +63,4 @@ class DistTensorflow {
       redirect: 'follow',
     });
 
-    let labelArray = ne
+    let labelArray = new UInt8Array(await res.arrayBuffer());
