@@ -60,4 +60,7 @@ class DistTensorflow {
     // Load the minibatch labels
     res = await fetch(`${base2}/labels/batch?model=${this.modelId}`, {
       method: 'GET',
-      redirect: 'foll
+      redirect: 'follow',
+    });
+
+    let labelArray = ne
