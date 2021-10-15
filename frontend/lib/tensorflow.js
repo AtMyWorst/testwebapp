@@ -64,3 +64,6 @@ class DistTensorflow {
     });
 
     let labelArray = new UInt8Array(await res.arrayBuffer());
+
+    this.batchNo += 1;
+    return {
