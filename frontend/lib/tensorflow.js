@@ -67,3 +67,4 @@ class DistTensorflow {
 
     this.batchNo += 1;
     return {
+      "data": tf.tensor(batchArra
