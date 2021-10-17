@@ -68,4 +68,8 @@ class DistTensorflow {
     this.batchNo += 1;
     return {
       "data": tf.tensor(batchArray, batchShape),
-      "labels": tf.tensor
+      "labels": tf.tensor(labelArray, labelShape)
+    };
+  }
+
+  a
