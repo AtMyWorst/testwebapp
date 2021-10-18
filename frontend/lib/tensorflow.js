@@ -72,4 +72,5 @@ class DistTensorflow {
     };
   }
 
-  a
+  async updateWeights() {
+    le
