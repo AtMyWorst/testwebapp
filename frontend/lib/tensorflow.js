@@ -73,4 +73,5 @@ class DistTensorflow {
   }
 
   async updateWeights() {
-    le
+    let oldWeights = this.model.getWeights();
+
