@@ -75,3 +75,4 @@ class DistTensorflow {
   async updateWeights() {
     let oldWeights = this.model.getWeights();
 
+    let res = await fetch(`${base1}/p
