@@ -77,4 +77,5 @@ class DistTensorflow {
 
     let res = await fetch(`${base1}/params/${this.modelId}`, {
       method: 'POST',
-      body: JSON.stringif
+      body: JSON.stringify({
+        shape: oldWeights.shape,
