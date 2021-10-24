@@ -76,4 +76,5 @@ class DistTensorflow {
     let oldWeights = this.model.getWeights();
 
     let res = await fetch(`${base1}/params/${this.modelId}`, {
-      meth
+      method: 'POST',
+      body: JSON.stringif
