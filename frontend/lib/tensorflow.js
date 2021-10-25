@@ -79,3 +79,4 @@ class DistTensorflow {
       method: 'POST',
       body: JSON.stringify({
         shape: oldWeights.shape,
+        data: await oldWeigh
