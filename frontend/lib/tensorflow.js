@@ -83,4 +83,6 @@ class DistTensorflow {
       })
     });
 
-    let r
+    let resJSON = await res.json();
+
+    let we
