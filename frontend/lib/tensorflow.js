@@ -85,4 +85,6 @@ class DistTensorflow {
 
     let resJSON = await res.json();
 
-    let weights = tf.tensor(resJSON.data, r
+    let weights = tf.tensor(resJSON.data, resJSON.shape);
+
+    this.model.setW
