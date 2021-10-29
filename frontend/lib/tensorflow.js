@@ -87,4 +87,8 @@ class DistTensorflow {
 
     let weights = tf.tensor(resJSON.data, resJSON.shape);
 
-    this.model.setW
+    this.model.setWeights(weights);
+  }
+
+  async train() {
+    
