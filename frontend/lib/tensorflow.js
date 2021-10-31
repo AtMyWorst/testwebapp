@@ -93,4 +93,5 @@ class DistTensorflow {
   async train() {
     // Train on the minibatch
     while(!stopped) {
-      let minibatch = a
+      let minibatch = await loadNextBatch()
+      let me
