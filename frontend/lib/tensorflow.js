@@ -94,4 +94,4 @@ class DistTensorflow {
     // Train on the minibatch
     while(!stopped) {
       let minibatch = await loadNextBatch()
-      let me
+      let metrics = await this.model.trainOnBatch(
