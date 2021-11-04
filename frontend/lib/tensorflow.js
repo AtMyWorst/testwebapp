@@ -97,4 +97,5 @@ class DistTensorflow {
       let metrics = await this.model.trainOnBatch(minibatch.data, minibatch.label);
       await updateWeights();
 
-      // Callbacks
+      // Callbacks for statistics
+      statsCallback(metrics
