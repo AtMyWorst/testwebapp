@@ -102,4 +102,6 @@ class DistTensorflow {
     }
   }
 
-  async st
+  async start() {
+    this.stopped = false;
+   
