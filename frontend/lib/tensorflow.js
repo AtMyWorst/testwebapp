@@ -98,4 +98,8 @@ class DistTensorflow {
       await updateWeights();
 
       // Callbacks for statistics
-      statsCallback(metrics
+      statsCallback(metrics, this.batchNo);
+    }
+  }
+
+  async st
