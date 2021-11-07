@@ -104,4 +104,8 @@ class DistTensorflow {
 
   async start() {
     this.stopped = false;
+    await this.train();
+  }
+
+  stop() {
    
