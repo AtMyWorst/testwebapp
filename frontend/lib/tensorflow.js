@@ -108,4 +108,8 @@ class DistTensorflow {
   }
 
   stop() {
-   
+    this.stopped = true;
+  }
+}
+
+export
