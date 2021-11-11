@@ -112,4 +112,4 @@ class DistTensorflow {
   }
 }
 
-export
+export default DistTensorflow;
