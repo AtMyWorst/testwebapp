@@ -1,3 +1,3 @@
 # MIDDLEWARE
 
-**This directory is not required, you can 
+**This directory is not required, you can delete it if you don't want to use 
