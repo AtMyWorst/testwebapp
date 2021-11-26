@@ -5,4 +5,6 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_packa
+    title: process.env.npm_package_name || '',
+    meta: [
+      { c
