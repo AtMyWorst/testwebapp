@@ -7,4 +7,5 @@ module.exports = {
   head: {
     title: process.env.npm_package_name || '',
     meta: [
-      { c
+      { charset: 'utf-8' },
+      { name: 'v
