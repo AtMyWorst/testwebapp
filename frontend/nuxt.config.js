@@ -8,4 +8,4 @@ module.exports = {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
-      { name: 'v
+      { name: 'viewport', content: 'width=devic
