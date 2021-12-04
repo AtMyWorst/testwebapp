@@ -13,4 +13,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css
+      { rel: 'stylesheet', href: 'https://rsms.me/inter/inter.css' }
+    ]
+  },
+  /*
+  ** Customiz
