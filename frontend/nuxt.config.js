@@ -24,4 +24,5 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~
+    '~/assets/css/tailwind.css',
+    '@fortawesome/fonta
