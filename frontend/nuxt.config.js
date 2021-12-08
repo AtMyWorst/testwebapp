@@ -25,4 +25,7 @@ module.exports = {
   */
   css: [
     '~/assets/css/tailwind.css',
-    '@fortawesome/fonta
+    '@fortawesome/fontawesome-svg-core/styles.css'
+  ],
+  /*
+  ** Plu
