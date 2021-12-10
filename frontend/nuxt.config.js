@@ -28,4 +28,5 @@ module.exports = {
     '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   /*
-  ** Plu
+  ** Plugins to load before mounting the App
+  *
