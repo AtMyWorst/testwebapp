@@ -36,4 +36,5 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
- 
+  modules: [
+    // Doc: https://axio
