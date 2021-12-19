@@ -47,4 +47,7 @@ module.exports = {
   axios: {
   },
   /*
-  ** Buil
+  ** Build configuration
+  */
+  build: {
+    post
