@@ -42,4 +42,9 @@ module.exports = {
   ],
   /*
   ** Axios module configuration
-  ** See https://axios.nuxtjs.org/opti
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {
+  },
+  /*
+  ** Buil
