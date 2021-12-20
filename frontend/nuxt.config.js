@@ -50,4 +50,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    post
+    postcss: {
+      plugins: {
+        tailw
