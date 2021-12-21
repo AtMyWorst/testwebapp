@@ -52,4 +52,4 @@ module.exports = {
   build: {
     postcss: {
       plugins: {
-        tailw
+        tailwindcss: './tailwind.config.js'
