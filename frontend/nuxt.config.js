@@ -56,4 +56,5 @@ module.exports = {
       }
     },
     /*
-    ** You c
+    ** You can extend webpack config here
+   
