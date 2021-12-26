@@ -1,3 +1,3 @@
 # PAGES
 
-This
+This directory contains your Application View
