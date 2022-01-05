@@ -51,3 +51,38 @@
         <CenteredText class="text-4xl">
           87%
         </CenteredText>
+      </Card>
+    </Cards>
+  </div>
+</template>
+
+<script>
+import Header from '~/components/common/Header.vue'
+import Cards from '~/components/common/Cards.vue'
+import Card from '~/components/common/Card.vue'
+import CenteredText from '~/components/common/CenteredText.vue'
+import trend from 'vuetrend'
+import DistTensorflow from '~/lib/tensorflow.js'
+
+const gradient = ['#ffffff', '#ff974d']
+
+export default {
+  layout: 'client',
+  components: {
+    Header,
+    Cards,
+    Card,
+    CenteredText,
+    trend
+  },
+  computed: {
+    shareLink() {
+      return 'https://staging.webml.app/' + this.$route.params.id
+    }
+  },
+  data() {
+    return {
+      running: false,
+      gradient,
+      title: 'MNIST',
+      major: [0, 1, 1, 2, 5, 6, 7, 8, 10, 21, 30, 45, 50, 52, 53],
