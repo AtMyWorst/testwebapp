@@ -86,3 +86,33 @@ export default {
       gradient,
       title: 'MNIST',
       major: [0, 1, 1, 2, 5, 6, 7, 8, 10, 21, 30, 45, 50, 52, 53],
+      tf: new DistTensorflow(
+        this.$route.params.id,
+        function(metrics, batchNo) {
+          console.log(metrics)
+          console.log(batchNo)
+        },
+        process.env.NUXT_ENV_BACKEND2_URL || 'http://localhost:10200',
+        process.env.NUXT_ENV_BACKEND1_URL || 'http://localhost:10201'
+      )
+    }
+  },
+  created: function() {
+    const base = process.env.NUXT_ENV_BACKEND2_URL || 'http://localhost:10200'
+    const id = this.$route.params.id
+    fetch(`${base}/metadata?model=${id}`)
+      .then(() => {
+        return res.json()
+      })
+      .then(body => {
+        this.title = body.title
+      })
+  },
+  methods: {
+    toggleRunning: function() {
+      this.running ? console.log('stop') : console.log('start')
+      this.running = !this.running
+    }
+  }
+}
+</script>
