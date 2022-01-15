@@ -3,4 +3,4 @@
     <Header :title="title" subtitle="by MakerForce">
       <template v-slot:buttons-left>
         <router-link class="my-2 mr-4" :to="{ name: 'admin' }">
-          <fa-icon size="2x" :
+          <fa-icon size="2x" :icon="['far', 'arrow-left']" />
