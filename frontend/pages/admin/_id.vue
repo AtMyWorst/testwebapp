@@ -7,4 +7,5 @@
         </router-link>
       </template>
       <template v-slot:buttons-right>
-        <button class="my-2
+        <button class="my-2 ml-4">
+          <fa-icon size="2x" :
