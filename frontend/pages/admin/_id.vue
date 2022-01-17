@@ -6,4 +6,5 @@
           <fa-icon size="2x" :icon="['far', 'arrow-left']" />
         </router-link>
       </template>
-      <template v-slot:buttons-ri
+      <template v-slot:buttons-right>
+        <button class="my-2
