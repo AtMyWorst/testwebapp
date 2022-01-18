@@ -8,4 +8,5 @@
       </template>
       <template v-slot:buttons-right>
         <button class="my-2 ml-4">
-          <fa-icon size="2x" :
+          <fa-icon size="2x" :icon="['far', 'times-hexagon']" />
+      
