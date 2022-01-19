@@ -11,4 +11,5 @@
           <fa-icon size="2x" :icon="['far', 'times-hexagon']" />
         </button>
         <button class="my-2 ml-4">
-          <fa-icon size="2x"
+          <fa-icon size="2x" :icon="['far', 'pause']" />
+       
