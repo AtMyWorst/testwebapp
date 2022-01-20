@@ -13,4 +13,6 @@
         <button class="my-2 ml-4">
           <fa-icon size="2x" :icon="['far', 'pause']" />
         </button>
-      </template
+      </template>
+      <template v-slot:content>
+        
