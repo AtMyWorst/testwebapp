@@ -17,4 +17,6 @@
       <template v-slot:content>
         <div class="mx-3 my-6">
           <h2 class="font-medium">Loss</h2>
-          <t
+          <trend
+            :data="major"
+          
