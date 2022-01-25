@@ -20,4 +20,6 @@
           <trend
             :data="major"
             :gradient="gradient"
-        
+            :height="200"
+			:width="400"
+ 
