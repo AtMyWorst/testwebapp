@@ -19,4 +19,5 @@
           <h2 class="font-medium">Loss</h2>
           <trend
             :data="major"
-          
+            :gradient="gradient"
+        
