@@ -22,4 +22,5 @@
             :gradient="gradient"
             :height="200"
 			:width="400"
- 
+            auto-draw
+         
