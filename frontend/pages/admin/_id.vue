@@ -23,4 +23,6 @@
             :height="200"
 			:width="400"
             auto-draw
-         
+            smooth
+          >
+          </tre
