@@ -27,4 +27,5 @@
           >
           </trend>
         </div>
-        <div class=
+        <div class="mx-4 my-8">
+          <div class
