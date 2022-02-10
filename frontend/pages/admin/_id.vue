@@ -28,4 +28,5 @@
           </trend>
         </div>
         <div class="mx-4 my-8">
-          <div class
+          <div class="font-medium">Share this link</div>
+  
