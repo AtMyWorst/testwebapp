@@ -29,4 +29,4 @@
         </div>
         <div class="mx-4 my-8">
           <div class="font-medium">Share this link</div>
-  
+          <div class="font-bold text-xl">{{ sh
