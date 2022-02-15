@@ -31,4 +31,6 @@
           <div class="font-medium">Share this link</div>
           <div class="font-bold text-xl">{{ shareLink }}</div>
         </div>
-      </tem
+      </template>
+    </Header>
+    <Car
