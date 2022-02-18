@@ -34,4 +34,5 @@
       </template>
     </Header>
     <Cards>
-      <Card subtitle="Elaps
+      <Card subtitle="Elapsed time">
+        <CenteredText 
