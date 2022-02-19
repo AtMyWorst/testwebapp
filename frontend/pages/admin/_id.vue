@@ -39,4 +39,5 @@
 		Completed
         </CenteredText>
       </Card>
-      
+      <Card subtitle="Loss">
+        <
