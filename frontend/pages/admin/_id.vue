@@ -37,4 +37,6 @@
       <Card subtitle="Elapsed time">
         <CenteredText class="text-4xl">
 		Completed
-        </Cent
+        </CenteredText>
+      </Card>
+      
