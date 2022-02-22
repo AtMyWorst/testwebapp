@@ -41,4 +41,7 @@
       </Card>
       <Card subtitle="Loss">
         <CenteredText class="text-4xl">
-          0.56
+          0.567
+        </CenteredText>
+      </Card>
+  
