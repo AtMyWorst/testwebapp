@@ -44,4 +44,5 @@
           0.567
         </CenteredText>
       </Card>
-      <Card subtitle="Batch N
+      <Card subtitle="Batch No.">
+        <CenteredText class="text
