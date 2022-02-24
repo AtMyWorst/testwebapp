@@ -47,3 +47,6 @@
       <Card subtitle="Batch No.">
         <CenteredText class="text-4xl">
           468
+        </CenteredText>
+      </Card>
+  
