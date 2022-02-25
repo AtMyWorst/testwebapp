@@ -51,3 +51,5 @@
       </Card>
       <Card subtitle="Accuracy">
         <CenteredText class="text-4xl">
+          87%
+        </CenteredText>
