@@ -55,4 +55,8 @@
         </CenteredText>
       </Card>
     </Cards>
-  </
+  </div>
+</template>
+
+<script>
+import Header from '~/co
