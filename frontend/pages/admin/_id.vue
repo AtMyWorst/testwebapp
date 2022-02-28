@@ -53,3 +53,6 @@
         <CenteredText class="text-4xl">
           87%
         </CenteredText>
+      </Card>
+    </Cards>
+  </
