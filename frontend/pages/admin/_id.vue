@@ -60,4 +60,5 @@
 
 <script>
 import Header from '~/components/common/Header.vue'
-import Cards from '~/components/commo
+import Cards from '~/components/common/Cards.vue'
+import Card f
