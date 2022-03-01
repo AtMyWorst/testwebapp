@@ -59,4 +59,5 @@
 </template>
 
 <script>
-import Header from '~/co
+import Header from '~/components/common/Header.vue'
+import
