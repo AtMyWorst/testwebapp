@@ -60,4 +60,4 @@
 
 <script>
 import Header from '~/components/common/Header.vue'
-import
+import Cards from '~/components/commo
