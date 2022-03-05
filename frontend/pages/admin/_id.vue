@@ -62,4 +62,5 @@
 import Header from '~/components/common/Header.vue'
 import Cards from '~/components/common/Cards.vue'
 import Card from '~/components/common/Card.vue'
-import CenteredText from '~/components/commo
+import CenteredText from '~/components/common/CenteredText.vue'
+import tre
