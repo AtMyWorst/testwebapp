@@ -65,4 +65,6 @@ import Card from '~/components/common/Card.vue'
 import CenteredText from '~/components/common/CenteredText.vue'
 import trend from 'vuetrend'
 
-const gradient = ['#f
+const gradient = ['#ffffff', '#ff974d']
+
+export default {
