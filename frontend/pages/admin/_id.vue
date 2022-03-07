@@ -68,3 +68,5 @@ import trend from 'vuetrend'
 const gradient = ['#ffffff', '#ff974d']
 
 export default {
+  layout: 'client',
+  components: 
