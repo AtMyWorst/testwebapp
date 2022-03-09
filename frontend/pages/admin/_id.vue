@@ -73,4 +73,7 @@ export default {
     Header,
     Cards,
     Card,
-   
+    CenteredText,
+    trend
+  },
+  com
