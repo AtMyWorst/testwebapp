@@ -78,4 +78,4 @@ export default {
   },
   computed: {
     shareLink() {
- 
+      return 'https://staging.webml.app
