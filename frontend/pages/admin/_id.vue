@@ -76,4 +76,6 @@ export default {
     CenteredText,
     trend
   },
-  com
+  computed: {
+    shareLink() {
+ 
