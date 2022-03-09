@@ -69,4 +69,8 @@ const gradient = ['#ffffff', '#ff974d']
 
 export default {
   layout: 'client',
-  components: 
+  components: {
+    Header,
+    Cards,
+    Card,
+   
