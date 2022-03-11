@@ -78,4 +78,7 @@ export default {
   },
   computed: {
     shareLink() {
-      return 'https://staging.webml.app
+      return 'https://staging.webml.app/' + this.$route.params.id
+    }
+  },
+  
