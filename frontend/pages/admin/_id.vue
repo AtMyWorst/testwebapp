@@ -81,4 +81,6 @@ export default {
       return 'https://staging.webml.app/' + this.$route.params.id
     }
   },
-  
+  data() {
+    return {
+      grad
