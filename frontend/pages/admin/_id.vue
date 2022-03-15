@@ -83,4 +83,6 @@ export default {
   },
   data() {
     return {
-      grad
+      gradient,
+      title: 'MNIST',
+      major: [0,
