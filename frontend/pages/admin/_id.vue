@@ -88,4 +88,5 @@ export default {
       major: [0, 0, 0, 0]
     }
   },
-  created: fu
+  created: function() {
+    const base = process.e
