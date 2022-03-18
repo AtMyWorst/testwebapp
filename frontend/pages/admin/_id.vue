@@ -85,4 +85,7 @@ export default {
     return {
       gradient,
       title: 'MNIST',
-      major: [0,
+      major: [0, 0, 0, 0]
+    }
+  },
+  created: fu
