@@ -89,4 +89,4 @@ export default {
     }
   },
   created: function() {
-    const base = process.e
+    const base = process.env.NUXT_ENV_BACKEND2_URL || 'http://localh
