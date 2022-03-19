@@ -93,4 +93,6 @@ export default {
     const id = this.$route.params.id
     fetch(`${base}/metadata?model=${id}`)
       .then(() => {
-    
+        return res.json()
+      })
+      .then(body => 
