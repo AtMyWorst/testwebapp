@@ -89,4 +89,5 @@ export default {
     }
   },
   created: function() {
-    const base = process.env.NUXT_ENV_BACKEND2_URL || 'http://localh
+    const base = process.env.NUXT_ENV_BACKEND2_URL || 'http://localhost:10200'
+    const id = this.$rout
