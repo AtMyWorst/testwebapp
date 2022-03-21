@@ -95,4 +95,5 @@ export default {
       .then(() => {
         return res.json()
       })
-      .then(body => 
+      .then(body => {
+        this.title 
