@@ -96,4 +96,8 @@ export default {
         return res.json()
       })
       .then(body => {
-        this.title 
+        this.title = body.title
+      })
+  }
+}
+</script>
