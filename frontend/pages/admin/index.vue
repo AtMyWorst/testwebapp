@@ -37,3 +37,44 @@
 <script>
 import Header from '~/components/common/Header.vue'
 import Cards from '~/components/common/Cards.vue'
+import Card from '~/components/common/Card.vue'
+import Subcard from '~/components/common/Subcard.vue'
+import CenteredText from '~/components/common/CenteredText.vue'
+import NewSessionDialog from '~/components/admin/NewSessionDialog.vue'
+
+export default {
+  components: {
+    Header,
+    Cards,
+    Card,
+    Subcard,
+    CenteredText,
+    NewSessionDialog
+  },
+  data: () => ({
+    showNewSessionDialog: false,
+	  models: [{
+		title: 'MNIST',
+		  id: 'cjxsamxuj0000245zyy4smkw2',
+		elapsed: 'Completed',
+		  loss: 0.567,
+	  }]
+  }),
+  methods: {
+    fetch() {
+      // Initialize all the models and format them follow the data format above
+      const base = process.env.NUXT_ENV_BACKEND1_URL || 'http://localhost:10201'
+      const base2 =
+        process.env.NUXT_ENV_BACKEND2_URL || 'http://localhost:10200'
+      fetch(base2 + '/models')
+        .then(res => {
+          return res.json()
+        })
+        .then(body => {
+          return Promise.all(
+            body.models
+              .filter(modelName => modelName != 'parser')
+              .map(modelName => {
+                return fetch(`${base}/metadata?model=${modelName}`)
+                  .then(res => res.json())
+                  .then(meta => {
