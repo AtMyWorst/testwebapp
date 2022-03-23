@@ -78,3 +78,20 @@ export default {
                 return fetch(`${base}/metadata?model=${modelName}`)
                   .then(res => res.json())
                   .then(meta => {
+                    return fetch(`${base}/params/loss/${modelName}`)
+                      .then(res => res.text())
+                      .then(loss => ({ id: modelName, title: meta.title, loss }))
+                  })
+              })
+          )
+        })
+        .then(models => {
+          this.models = models
+        })
+    }
+  },
+  created() {
+    //this.fetch()
+  }
+}
+</script>
