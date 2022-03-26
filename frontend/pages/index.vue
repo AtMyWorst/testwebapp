@@ -32,3 +32,6 @@ import Button from '~/components/common/Button.vue'
 export default {
   components: {
     Button
+  }
+}
+</script>
