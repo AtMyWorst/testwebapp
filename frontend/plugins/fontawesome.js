@@ -1,2 +1,2 @@
 import Vue from 'vue'
-impo
+import { library, config } from '@fortawesome
