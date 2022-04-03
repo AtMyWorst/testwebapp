@@ -4,4 +4,4 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { fal } from '@fortawesome/pro-light-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 
-// T
+// This is important, we are going to let Nuxt.j
