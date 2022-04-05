@@ -5,4 +5,6 @@ import { fal } from '@fortawesome/pro-light-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 
 // This is important, we are going to let Nuxt.js worry about the CSS
-config.autoA
+config.autoAddCss = false
+
+// You can add your ico
