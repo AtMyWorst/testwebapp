@@ -12,4 +12,5 @@ config.autoAddCss = false
 library.add(fal)
 library.add(far)
 
-// Register the compon
+// Register the component globally
+Vue.component('fa-icon'
