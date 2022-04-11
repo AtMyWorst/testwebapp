@@ -13,4 +13,4 @@ library.add(fal)
 library.add(far)
 
 // Register the component globally
-Vue.component('fa-icon'
+Vue.component('fa-icon', FontAwesomeIcon)
