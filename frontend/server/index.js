@@ -5,4 +5,5 @@ const { Nuxt, Builder } = require('nuxt')
 const app = new Koa()
 
 // Import and Set Nuxt.js options
-const config = require('.
+const config = require('../nuxt.config.js')
+config.dev = !(ap
