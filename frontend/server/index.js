@@ -6,4 +6,6 @@ const app = new Koa()
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
-config.dev = !(ap
+config.dev = !(app.env === 'production')
+
+async function sta
