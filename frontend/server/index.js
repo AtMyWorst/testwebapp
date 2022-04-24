@@ -8,4 +8,6 @@ const app = new Koa()
 const config = require('../nuxt.config.js')
 config.dev = !(app.env === 'production')
 
-async function sta
+async function start() {
+  // Instantiate nuxt.js
+  
