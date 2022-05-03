@@ -12,4 +12,5 @@ async function start() {
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
 
-  con
+  const {
+    host = process.env.HOST || '
