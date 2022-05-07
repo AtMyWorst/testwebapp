@@ -18,4 +18,5 @@ async function start() {
   } = nuxt.options.server
 
   // Build in development
-  if (c
+  if (config.dev) {
+    const builder = new Build
