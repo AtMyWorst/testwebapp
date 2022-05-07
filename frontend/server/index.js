@@ -19,4 +19,5 @@ async function start() {
 
   // Build in development
   if (config.dev) {
-    const builder = new Build
+    const builder = new Builder(nuxt)
+    await builder.build()
