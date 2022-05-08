@@ -24,3 +24,6 @@ async function start() {
   } else {
     await nuxt.ready()
   }
+
+  app.use(ctx => {
+    ctx.stat
