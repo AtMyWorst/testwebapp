@@ -27,4 +27,5 @@ async function start() {
 
   app.use(ctx => {
     ctx.status = 200
-    ctx.respond = false // Bypass Koa's built-in re
+    ctx.respond = false // Bypass Koa's built-in response handling
+    ctx.req.ctx = ctx // This mi
