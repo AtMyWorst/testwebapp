@@ -26,4 +26,5 @@ async function start() {
   }
 
   app.use(ctx => {
-    ctx.stat
+    ctx.status = 200
+    ctx.respond
