@@ -28,4 +28,4 @@ async function start() {
   app.use(ctx => {
     ctx.status = 200
     ctx.respond = false // Bypass Koa's built-in response handling
-    ctx.req.ctx = ctx // This mi
+    ctx.req.ctx = ctx // This might be useful later on, e.g. in nuxtSe
