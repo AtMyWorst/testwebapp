@@ -29,4 +29,7 @@ async function start() {
     ctx.status = 200
     ctx.respond = false // Bypass Koa's built-in response handling
     ctx.req.ctx = ctx // This might be useful later on, e.g. in nuxtServerInit or with nuxt-stash
-    nuxt.render(ctx
+    nuxt.render(ctx.req, ctx.res)
+  })
+
+  app.l
