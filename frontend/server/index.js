@@ -34,4 +34,4 @@ async function start() {
 
   app.listen(port, host)
   consola.ready({
-    mess
+    message: `Server listening on http://${ho
