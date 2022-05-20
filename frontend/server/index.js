@@ -32,4 +32,6 @@ async function start() {
     nuxt.render(ctx.req, ctx.res)
   })
 
-  app.l
+  app.listen(port, host)
+  consola.ready({
+    mess
