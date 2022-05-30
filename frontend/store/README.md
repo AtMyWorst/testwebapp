@@ -5,4 +5,4 @@
 This directory contains your Vuex Store files.
 Vuex Store option is implemented in the Nuxt.js framework.
 
-Cr
+Creating a file in this directory automati
