@@ -715,3 +715,49 @@
   integrity sha512-D4ICXg9oU08eF9o7Or392gPpjmwwgJu8ecCFusthbID95CLVXOgIyd4mOKD9Nud5Ckz+Ty59pqkNtThDKR0erA==
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.19"
+
+"@fortawesome/pro-light-svg-icons@^5.9.0":
+  version "5.9.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-light-svg-icons/-/pro-light-svg-icons-5.9.0.tgz#a10747f20772fd6246d450a2ab7a644472921c73"
+  integrity sha512-GGlzdehkwF0dMi6SMaqYZ9lS08j4IqEutOY7y4UYFpXjB176W66dnT/QNGbqBzww04Woxb/+/iVwyz9tjm85WQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.19"
+
+"@fortawesome/pro-regular-svg-icons@^5.9.0":
+  version "5.9.0"
+  resolved "https://npm.fontawesome.com/@fortawesome/pro-regular-svg-icons/-/pro-regular-svg-icons-5.9.0.tgz#53fc28561e2ccbd7a314964a7192becc14507dfb"
+  integrity sha512-GnMBC1LMLa7vs1V3GyAHStjXShJFhMrvBVtFZtpr3gY+ALKWsMI5+966KiKp5858g98ECRo3Z/XaQvc0rMseXw==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.19"
+
+"@fortawesome/vue-fontawesome@^0.1.6":
+  version "0.1.6"
+  resolved "https://npm.fontawesome.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.6.tgz#18a0f4263b90f65180fc927325ba01896276ea04"
+  integrity sha512-HAGRbrOuGDwwUmCYdpzR0hhNQ3EE30dOS4JiJKcoZ+S4M210CxyU0OXCgzIg3HzK/23rlpHbV8zi9PDDZDnuIw==
+
+"@nuxt/babel-preset-app@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/babel-preset-app/-/babel-preset-app-2.8.1.tgz#4b6b9ec293d66426034b30409ebda8b17e625014"
+  integrity sha512-5dmzk8nYzRdUG1cx7Y0L0ekYNiJlLkl0uomo4s7PPZUvWq0GhyMGYcxiEelLzaFMUu9XSPeu7oX1LWCj9aS8lw==
+  dependencies:
+    "@babel/core" "^7.4.5"
+    "@babel/plugin-proposal-class-properties" "^7.4.4"
+    "@babel/plugin-proposal-decorators" "^7.4.4"
+    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
+    "@babel/plugin-transform-runtime" "^7.4.4"
+    "@babel/preset-env" "^7.4.5"
+    "@babel/runtime" "^7.4.5"
+    "@vue/babel-preset-jsx" "^1.0.0"
+    core-js "^2.6.5"
+
+"@nuxt/builder@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/builder/-/builder-2.8.1.tgz#56bf2147fb8523e13f9a6036b5acd12560d8cfa5"
+  integrity sha512-sPzP0uTZvRQ0+vizythI6zYv8qFoQDQKZB7uh4+g9AcM2yLxwco2R0hf4axzyBajyGVrlhZ23nONuSzZ6zdB0w==
+  dependencies:
+    "@nuxt/devalue" "^1.2.3"
+    "@nuxt/utils" "2.8.1"
+    "@nuxt/vue-app" "2.8.1"
+    chokidar "^3.0.1"
+    consola "^2.7.1"
+    fs-extra "^8.0.1"
