@@ -797,3 +797,44 @@
   dependencies:
     "@nuxt/utils" "2.8.1"
     consola "^2.7.1"
+    std-env "^2.2.1"
+
+"@nuxt/core@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/core/-/core-2.8.1.tgz#83c872dcef227be8fcd9c8193ad40c35c17d7c53"
+  integrity sha512-r702kRRX9P7CvU2m5d2AG5+GG5KC0HNYOy+P+1fjxjQhSD8TkHsP28TzgLx1vEgamJsqvdhAiOew60o54lWzaw==
+  dependencies:
+    "@nuxt/config" "2.8.1"
+    "@nuxt/devalue" "^1.2.3"
+    "@nuxt/server" "2.8.1"
+    "@nuxt/utils" "2.8.1"
+    "@nuxt/vue-renderer" "2.8.1"
+    consola "^2.7.1"
+    debug "^4.1.1"
+    esm "^3.2.25"
+    fs-extra "^8.0.1"
+    hash-sum "^1.0.2"
+    std-env "^2.2.1"
+
+"@nuxt/devalue@^1.2.3":
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/@nuxt/devalue/-/devalue-1.2.4.tgz#69eca032b7481fd3c019a78ade65d642da3f2f35"
+  integrity sha512-hS87c2HdSfTk1d+2KQx7mQpebyd2HjguvZu/UBy9LB+kUgT1qz2+Sj38FH32yJALK6Fv49ZfOZEwgcZ4rcNLjg==
+  dependencies:
+    consola "^2.9.0"
+
+"@nuxt/friendly-errors-webpack-plugin@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/friendly-errors-webpack-plugin/-/friendly-errors-webpack-plugin-2.5.0.tgz#5374665bc72d34b7dbadcc361a4777e3f0f5d46b"
+  integrity sha512-pUgPFmRL56/xuTCGN5rqgTfxvs1N/AYJw7q7tUHiZaBm3UyPgbIVPkadS9njwbFbPD2XcebVy7npQMMVwQJWfA==
+  dependencies:
+    chalk "^2.3.2"
+    consola "^2.6.0"
+    error-stack-parser "^2.0.0"
+    string-width "^2.0.0"
+
+"@nuxt/generator@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/generator/-/generator-2.8.1.tgz#4a94842b6c9ebec455279518a23dfdce99fca2b1"
+  integrity sha512-K866F2en/0BLnouUbR9bFgJPIiKIfZK9+E/ORSYqPcwPNMHWMFS6Lf1orwPct11nxcv8mzqBUodXEZLcW01feA==
+  dependencies:
