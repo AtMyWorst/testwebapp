@@ -875,3 +875,36 @@
     compression "^1.7.4"
     connect "^3.7.0"
     consola "^2.7.1"
+    etag "^1.8.1"
+    fresh "^0.5.2"
+    fs-extra "^8.0.1"
+    ip "^1.1.5"
+    launch-editor-middleware "^2.2.1"
+    on-headers "^1.0.2"
+    pify "^4.0.1"
+    serve-placeholder "^1.2.1"
+    serve-static "^1.14.1"
+    server-destroy "^1.0.1"
+
+"@nuxt/utils@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/utils/-/utils-2.8.1.tgz#0310e2db8e5591e7f164da3931624133847c0e0c"
+  integrity sha512-yw2vJLSwj37BTCwfJv1GkiTdDqDWLvC/QpUnL/tDq362iy7DjPl0v3c4qG5YNEQ7GxiIiWAj4ZzCFuwxa/ToDw==
+  dependencies:
+    consola "^2.7.1"
+    fs-extra "^8.0.1"
+    hash-sum "^1.0.2"
+    proper-lockfile "^4.1.1"
+    semver "^6.1.1"
+    serialize-javascript "^1.7.0"
+    signal-exit "^3.0.2"
+    ua-parser-js "^0.7.19"
+
+"@nuxt/vue-app@2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/vue-app/-/vue-app-2.8.1.tgz#1ecfc566cb9ab4679f4521cd409f4c4b78c5f79b"
+  integrity sha512-LNIrgWmXxyDf3o8fAF9rWJgmzAGbmsPaBWWPw7iUUADVPAeQP0CI+NDoxbIwcIOpo4nP3oqrtUfdj/xNd89CNw==
+  dependencies:
+    node-fetch "^2.6.0"
+    unfetch "^4.1.0"
+    vue "^2.6.10"
