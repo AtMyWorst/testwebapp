@@ -2025,3 +2025,38 @@ cache-base@^1.0.1:
     has-value "^1.0.0"
     isobject "^3.0.1"
     set-value "^2.0.0"
+    to-object-path "^0.3.0"
+    union-value "^1.0.0"
+    unset-value "^1.0.0"
+
+cache-content-type@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cache-content-type/-/cache-content-type-1.0.1.tgz#035cde2b08ee2129f4a8315ea8f00a00dba1453c"
+  integrity sha512-IKufZ1o4Ut42YUrZSo8+qnMTrFuKkvyoLXUywKz9GJ5BrhOFGhLdkx9sG4KAnVvbY6kEcSFjLQul+DVmBm2bgA==
+  dependencies:
+    mime-types "^2.1.18"
+    ylru "^1.2.0"
+
+cache-loader@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/cache-loader/-/cache-loader-3.0.1.tgz#cee6cf4b3cdc7c610905b26bad6c2fc439c821af"
+  integrity sha512-HzJIvGiGqYsFUrMjAJNDbVZoG7qQA+vy9AIoKs7s9DscNfki0I589mf2w6/tW+kkFH3zyiknoWV5Jdynu6b/zw==
+  dependencies:
+    buffer-json "^2.0.0"
+    find-cache-dir "^2.1.0"
+    loader-utils "^1.2.3"
+    mkdirp "^0.5.1"
+    neo-async "^2.6.1"
+    schema-utils "^1.0.0"
+
+caller-callsite@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/caller-callsite/-/caller-callsite-2.0.0.tgz#847e0fce0a223750a9a027c54b33731ad3154134"
+  integrity sha1-hH4PzgoiN1CpoCfFSzNzGtMVQTQ=
+  dependencies:
+    callsites "^2.0.0"
+
+caller-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-2.0.0.tgz#468f83044e369ab2010fac5f06ceee15bb2cb1f4"
+  integrity sha1-Ro+DBE42mrIBD6xfBs7uFbsssfQ=
