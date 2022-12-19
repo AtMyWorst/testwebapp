@@ -7378,3 +7378,47 @@ snyk-gradle-plugin@2.12.5:
     tslib "^1.9.3"
 
 snyk-module@1.9.1, snyk-module@^1.6.0, snyk-module@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/snyk-module/-/snyk-module-1.9.1.tgz#b2a78f736600b0ab680f1703466ed7309c980804"
+  integrity sha512-A+CCyBSa4IKok5uEhqT+hV/35RO6APFNLqk9DRRHg7xW2/j//nPX8wTSZUPF8QeRNEk/sX+6df7M1y6PBHGSHA==
+  dependencies:
+    debug "^3.1.0"
+    hosted-git-info "^2.7.1"
+
+snyk-mvn-plugin@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/snyk-mvn-plugin/-/snyk-mvn-plugin-2.3.0.tgz#a76cfc0041ecc4333f2c6f6f72138f1e4621da24"
+  integrity sha512-LOSiJu+XUPVqKCXcnQPLhlyTGm3ikDwjvYw5fpiEnvjMWkMDd8IfzZqulqreebJDmadUpP7Cn0fabfx7TszqxA==
+  dependencies:
+    lodash "4.17.11"
+    tslib "1.9.3"
+
+snyk-nodejs-lockfile-parser@1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/snyk-nodejs-lockfile-parser/-/snyk-nodejs-lockfile-parser-1.13.0.tgz#f3c81fd9a1870fdb5f71370e510d760326f3ee21"
+  integrity sha512-fC1o9SJ+iM+IYeBUYtvCIYh005WAvWMzqhEH3hI4zGPdCYQqGYIfVpXf29aCOKoorkTR345k5g6Etx54+BbrTQ==
+  dependencies:
+    "@yarnpkg/lockfile" "^1.0.2"
+    graphlib "^2.1.5"
+    lodash "^4.17.11"
+    source-map-support "^0.5.7"
+    tslib "^1.9.3"
+    uuid "^3.3.2"
+
+snyk-nuget-plugin@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/snyk-nuget-plugin/-/snyk-nuget-plugin-1.10.0.tgz#58aba49e37ca4ac99afcecb3d3c3917188daad84"
+  integrity sha512-V69AIWcHw4KrgEFC8kNWoqHo54wZkWGfqyVv+kJjQxARWYmQqV4YL/vxfLAoZ7mDsNXgjPn5M4ZEaeHFCeWcyA==
+  dependencies:
+    debug "^3.1.0"
+    jszip "^3.1.5"
+    lodash "^4.17.10"
+    snyk-paket-parser "1.4.3"
+    xml2js "^0.4.17"
+
+snyk-paket-parser@1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/snyk-paket-parser/-/snyk-paket-parser-1.4.3.tgz#380ae8c5fb598f81c110f6b645c728c9cc50b7a5"
+  integrity sha512-6m736zGVoeT/zS9KEtlmqTSPEPjAfLe8iYoQ3AwbyxDhzuLY49lTaV67MyZtGwjhi1x4KBe+XOgeWwyf6Avf/A==
+  dependencies:
+    tslib "^1.9.3"
