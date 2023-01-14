@@ -4,4 +4,5 @@ image_size = 0
 
 current = ""
 
-func
+function to_i32 (b1, b2, b3, b4)
+  loc
