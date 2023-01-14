@@ -1,2 +1,7 @@
 parsed_headers = false
-p
+position = 0
+image_size = 0
+
+current = ""
+
+func
