@@ -6,4 +6,7 @@ current = ""
 
 function to_i32 (b1, b2, b3, b4)
   local val = b4 + b3 * 8 + b2 * 16 + b1 * 24;
-  r
+  return val
+end
+
+function p
