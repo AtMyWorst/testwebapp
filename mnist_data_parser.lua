@@ -9,4 +9,6 @@ function to_i32 (b1, b2, b3, b4)
   return val
 end
 
-function parse (chunk, n) -- chunk is string o
+function parse (chunk, n) -- chunk is string of bytes
+  if not parsed_headers then
+    lo
