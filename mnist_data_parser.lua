@@ -9,4 +9,4 @@ function to_i32 (b1, b2, b3, b4)
   return val
 end
 
-function p
+function parse (chunk, n) -- chunk is string o
