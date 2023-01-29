@@ -11,4 +11,4 @@ end
 
 function parse (chunk, n) -- chunk is string of bytes
   if not parsed_headers then
-    lo
+    local row_size = to_i32(string.byte(chunk, 9)
