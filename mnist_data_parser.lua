@@ -13,4 +13,6 @@ function parse (chunk, n) -- chunk is string of bytes
   if not parsed_headers then
     local row_size = to_i32(string.byte(chunk, 9), string.byte(chunk, 10), string.byte(chunk, 11), string.byte(chunk, 12))
     local col_size = to_i32(string.byte(chunk, 13), string.byte(chunk, 14), string.byte(chunk, 15), string.byte(chunk, 16))
-    image_size = 
+    image_size = row_size * col_size
+    parsed_headers = true
+ 
