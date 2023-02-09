@@ -18,4 +18,7 @@ function parse (chunk, n) -- chunk is string of bytes
     position = 17
   end
 
-  loc
+  local i = 1
+  results = {}
+
+  if current ~= "
