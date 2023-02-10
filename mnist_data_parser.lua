@@ -22,4 +22,5 @@ function parse (chunk, n) -- chunk is string of bytes
   results = {}
 
   if current ~= "" then
-    local left_bytes = image_size 
+    local left_bytes = image_size - current:len()
+    current = curren
