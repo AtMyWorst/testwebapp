@@ -21,4 +21,5 @@ function parse (chunk, n) -- chunk is string of bytes
   local i = 1
   results = {}
 
-  if current ~= "
+  if current ~= "" then
+    local left_bytes = image_size 
