@@ -23,4 +23,5 @@ function parse (chunk, n) -- chunk is string of bytes
 
   if current ~= "" then
     local left_bytes = image_size - current:len()
-    current = curren
+    current = current..chunk:sub(1, left_bytes)
+    if current
