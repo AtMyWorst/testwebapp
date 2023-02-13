@@ -27,4 +27,6 @@ function parse (chunk, n) -- chunk is string of bytes
     if current:len() >= image_size then
       results[i] = current
       current = ""
-    
+      i = i + 1
+    end
+    posi
