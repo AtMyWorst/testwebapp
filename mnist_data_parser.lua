@@ -29,4 +29,7 @@ function parse (chunk, n) -- chunk is string of bytes
       current = ""
       i = i + 1
     end
-    posi
+    position = left_bytes + 1
+  end
+
+  while 
