@@ -32,4 +32,5 @@ function parse (chunk, n) -- chunk is string of bytes
     position = left_bytes + 1
   end
 
-  while 
+  while position + image_size < n do
+    l
