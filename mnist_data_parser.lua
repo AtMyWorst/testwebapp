@@ -33,4 +33,5 @@ function parse (chunk, n) -- chunk is string of bytes
   end
 
   while position + image_size < n do
-    local image = chunk:sub(position, position 
+    local image = chunk:sub(position, position + image_size)
+    results[i] = image
