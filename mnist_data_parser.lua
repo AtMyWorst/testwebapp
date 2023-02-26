@@ -39,4 +39,5 @@ function parse (chunk, n) -- chunk is string of bytes
     position = position + image_size
   end
 
-  if position < 
+  if position < n then
+    current = chunk:sub(position, n)
