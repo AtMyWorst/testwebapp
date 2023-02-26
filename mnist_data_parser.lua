@@ -36,4 +36,7 @@ function parse (chunk, n) -- chunk is string of bytes
     local image = chunk:sub(position, position + image_size)
     results[i] = image
     i = i + 1
-    position = position + 
+    position = position + image_size
+  end
+
+  if position < 
