@@ -44,4 +44,5 @@ function parse (chunk, n) -- chunk is string of bytes
   end
 
   position = 1
-  return res
+  return results
+end
