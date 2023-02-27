@@ -41,3 +41,7 @@ function parse (chunk, n) -- chunk is string of bytes
 
   if position < n then
     current = chunk:sub(position, n)
+  end
+
+  position = 1
+  return res
